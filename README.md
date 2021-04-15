@@ -3,7 +3,7 @@
 
 ## Autores do Projeto 🤝
 * [**Rafael Nóbrega de Lima**](https://https://github.com/KylixXD)
-* [**Lucas Bessa**](https://github.com/llBessa) 
+* [**Lucas Bessa Façanha Pereira**](https://github.com/llBessa) 
 ---
 ## Sobre 📚
 Projeto de conclusão de semestre referente a matéria de **Arquitetura e Organização de Computadores**, ofertada no 3° Semestre do curso de **Ciências da Computação**, ministrada por Hebert Oliveira, na **Universidade Federal de Roraima - UFRR**.
