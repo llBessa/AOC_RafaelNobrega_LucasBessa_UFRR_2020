@@ -3,9 +3,9 @@ Use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 Entity multiplicador is
-	 Port (a,b    : in Std_logic_vector (7 downto 0);
-         Produto : Out Std_Logic_Vector (15 downto 0)
-			);
+	 Port ( a,b  : in Std_logic_vector (7 downto 0);
+         Produto    : Out Std_Logic_Vector (15 downto 0)
+	       );
 
 end multiplicador; 
  
