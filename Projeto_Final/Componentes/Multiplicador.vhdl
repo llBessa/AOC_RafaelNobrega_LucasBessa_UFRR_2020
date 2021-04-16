@@ -10,7 +10,7 @@ Entity multiplicador is
 end multiplicador; 
  
 Architecture main of multiplicador is
-    Signal sig_1, sig_2 : Signed (7 downto 0 );
+    Signal sig_1, sig_2 : Signed (7 downto 0);
 Begin
         sig_1   <= signed(a);
         sig_2   <= signed(b);
