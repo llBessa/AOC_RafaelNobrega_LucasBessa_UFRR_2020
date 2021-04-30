@@ -18,4 +18,5 @@ Begin
 		else S0 <= B;
 		End if;
 End Process;
-End logic; 
+End logic;
+-- 
