@@ -3,31 +3,30 @@ Use Ieee.std_logic_1164.all;
 Use Ieee.numeric_std.all;
 
 Entity BancoRegistradores is port (
-	clock: in std_logic;
-	escreverReg:in std_logic;
-	endereco_regA:in std_logic_vector(1 downto 0);
-	endereco_regB:in std_logic_vector(1 downto 0);
-	escreverData:in std_logic_vector(7 downto 0);
-	reg_outA:out std_logic_vector(7 downto 0);
-	reg_outB:out std_logic_vector(7 downto 0)
-	
+	clock			: in std_logic;
+	escreveReg		:in std_logic;
+	addressReg1		:in std_logic_vector(1 downto 0);
+	addressReg2		:in std_logic_vector(1 downto 0);
+	escreveDado		:in std_logic_vector(7 downto 0);
+	out_Reg1		:out std_logic_vector(7 downto 0);
+	out_Reg2		:out std_logic_vector(7 downto 0)
 );
 End BancoRegistradores;
 
 Architecture main of BancoRegistradores is 
 
-	Type Banco_Registrador is Array (0 to 3)of std_logic_vector (7 downto 0);
-	Signal registrador : Banco_Registrador;
+	Type BancoRegistradores is Array (0 to 3)of std_logic_vector (7 downto 0);
+	Signal registradores : BancoRegistradores;
 
 Begin
-		Process (clock)
+		Process (clock, addressReg1, addressReg2, registradores)
 		Begin
 				if rising_edge(clock) then
-					if (escreverReg = '1') then
-						registrador(to_integer(unsigned(endereco_regA))) <= escreverData; 
+					if (escreveReg = '1') then
+						registradores(to_integer(unsigned(addressReg1))) <= escreveDado; 
 					End if;
 				End if;
-				reg_outA <= registrador(to_integer(unsigned(endereco_regA)));
-				reg_outB <= registrador(to_integer(unsigned(endereco_regB)));
+				out_Reg1 <= registradores(to_integer(unsigned(addressReg1)));
+				out_Reg2 <= registradores(to_integer(unsigned(addressReg2)));
 		End Process;
 End main;
