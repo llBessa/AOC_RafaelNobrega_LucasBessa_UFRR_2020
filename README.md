@@ -49,3 +49,4 @@ A organização dos diretórios é a seguinte e cada um possui as seguintes info
 <b> Autor</b>: <b>David A. Patterson/John L.Hennessy</b> <br>
  <b>Disponível em</b>: <a href="https://www.amazon.com.br/Organiza%C3%A7%C3%A3o-Projeto-Computadores-David-Patterson/dp/853523585X">Link</a>
 </p>
+.
