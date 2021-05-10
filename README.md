@@ -27,13 +27,13 @@ A organização dos diretórios é a seguinte e cada um possui as seguintes info
 > **Intel Quartus Prime** é um software de design de dispositivo lógico programável produzido pela Intel; antes da aquisição da Altera pela Intel, a ferramenta era chamada Altera Quartus Prime, anteriormente Altera Quartus II. (fonte: [Wikipedia](https://en.wikipedia.org/wiki/Intel_Quartus_Prime))
 
 ### Visual Studio Code
-
+<p align='center'>
 ![File, type, vscode Free Icon of vscode](https://avatars.githubusercontent.com/in/2406?s=88&v=4)
 
 > O **Visual Studio Code** é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle Git incorporado, realce de sintaxe, complementação inteligente de código, *snippets* e refatoração de código.(fonte:[Wikipedia](https://pt.wikipedia.org/wiki/Visual_Studio_Code))
 
 ### Draw.io
-
+<p align='center'>
 ![Free Video Tutorial: draw.io - Apple Mac, iPad & iPhone Tutorials from  ScreenCastsOnline](https://screencastsonline.com/site/show/icons-new/180/SCOM0897-180.png)
 
 >O **Draw.io** é um editor gráfico online no qual é possível desenvolver desenhos, gráficos e outros sem a necessidade de usar um software caro e pesado. Ele disponibiliza recursos para criação de qualquer tipo de desenho porém, possui uma parte dedicada à arquitetura da informação.(fonte:[TechTudo](https://www.techtudo.com.br/tudo-sobre/drawio.html))
