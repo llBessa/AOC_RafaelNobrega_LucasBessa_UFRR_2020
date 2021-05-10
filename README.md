@@ -1,6 +1,6 @@
 # Projeto de Desenvolvimento de processador MIPS de 8 bits
 
-![LogoProcessador](https://github.com/KylixXD/AOC_RafaelNobrega_LucasBessa_UFRR_2020/blob/main/LogoProcessador.png?raw=true)
+![Capa_Process2](E:\Nova pasta\Capa_Process2.png)
 
 ## Autores do Projeto 🤝
 
@@ -28,9 +28,8 @@ A organização dos diretórios é a seguinte e cada um possui as seguintes info
 
 ### Visual Studio Code
 
-![IconVscode]
-<p align='center'>
-<img align="left" width="200" height="270" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png"><br>
+![File, type, vscode Free Icon of vscode](https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png)
+
 > O **Visual Studio Code** é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle Git incorporado, realce de sintaxe, complementação inteligente de código, *snippets* e refatoração de código.(fonte:[Wikipedia](https://pt.wikipedia.org/wiki/Visual_Studio_Code))
 
 ### Draw.io
@@ -50,4 +49,3 @@ A organização dos diretórios é a seguinte e cada um possui as seguintes info
 <b> Autor</b>: <b>David A. Patterson/John L.Hennessy</b> <br>
  <b>Disponível em</b>: <a href="https://www.amazon.com.br/Organiza%C3%A7%C3%A3o-Projeto-Computadores-David-Patterson/dp/853523585X">Link</a>
 </p>
-
