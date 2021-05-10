@@ -29,7 +29,7 @@ A organização dos diretórios é a seguinte e cada um possui as seguintes info
 ### Visual Studio Code
 
 <p align='center'>
-<img src="https://github.com/KylixXD/AOC_RafaelNobrega_LucasBessa_UFRR_2020/blob/main/ImagensdoProjeto/drawio.png?raw=true">
+<img src="https://github.com/KylixXD/AOC_RafaelNobrega_LucasBessa_UFRR_2020/blob/main/ImagensdoProjeto/visualstudiocode.png?raw=true">
 </p>
 
 > O **Visual Studio Code** é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle Git incorporado, realce de sintaxe, complementação inteligente de código, *snippets* e refatoração de código.(fonte:[Wikipedia](https://pt.wikipedia.org/wiki/Visual_Studio_Code))
