@@ -1,0 +1,265 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "outPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outPC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outROM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "JumpAddress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "JumpAddress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "JumpAddress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "JumpAddress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1Address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1Address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2Address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2Address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "overflow",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outSomaPC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "outAndPort",
+					"strict" : false
+				},
+				{
+					"name" : "Zero",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
