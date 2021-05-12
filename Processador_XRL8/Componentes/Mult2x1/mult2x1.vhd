@@ -8,7 +8,6 @@ Port(
 		S 			: in std_logic;
 		out_data : out std_logic_vector(7 downto 0)
 );
-
 End mult2x1;
 
 Architecture logic of mult2x1 is 

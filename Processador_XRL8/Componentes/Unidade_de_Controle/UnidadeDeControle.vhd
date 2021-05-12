@@ -13,7 +13,6 @@ Entity UnidadeDeControle is
         LerMem : OUT std_logic;
         Branch : OUT std_logic;
         Jump : OUT std_logic
-
 		);
 End UnidadeDeControle;
 
