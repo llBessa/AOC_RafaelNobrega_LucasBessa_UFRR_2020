@@ -1,6 +1,9 @@
 # Projeto de Desenvolvimento de processador MIPS de 8 bits
 
-![Capa_Process2](E:\Nova pasta\Capa_Process2.png)
+<p align='center'>
+<img src="https://github.com/KylixXD/AOC_RafaelNobrega_LucasBessa_UFRR_2020/blob/main/ImagensdoProjeto/LogoProcessador.png?raw=true">
+</p>
+
 
 ## Autores do Projeto 🤝
 
