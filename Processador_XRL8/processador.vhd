@@ -17,7 +17,9 @@ entity processador is
         outULA          : out std_logic_vector(7 downto 0);
         overflow        : out std_logic;
         outRAM          : out std_logic_vector(7 downto 0);
-        outSomaPC       : out std_logic_vector(7 downto 0)
+        outSomaPC       : out std_logic_vector(7 downto 0);
+		  outAndPort		: out std_logic;
+		  Zero				: out std_logic
   );
 end entity;
 
@@ -114,7 +116,7 @@ architecture main of processador is
     in_A    : in std_logic_vector(7 downto 0);
     in_B    : in std_logic_vector(7 downto 0);
     AluOp   : in std_logic_vector(3 downto 0); 
-    Zero    : out std_logic;
+    zero    : out std_logic;
     outULA  : out std_logic_vector(7 downto 0);
     overflow: out std_logic
     );
@@ -246,4 +248,6 @@ architecture main of processador is
     overflow <= estouroMEM;
     outRAM  <= outDadoRAM;
     outSomaPC <= saidaSomaPC;
+	 outAndPort <= outAnd;
+	 Zero <= ULAZero;
 end main;
