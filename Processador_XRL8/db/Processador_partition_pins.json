@@ -4,123 +4,123 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "zero",
+					"name" : "out_Reg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[0]",
+					"name" : "out_Reg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[1]",
+					"name" : "out_Reg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[2]",
+					"name" : "out_Reg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[3]",
+					"name" : "out_Reg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[4]",
+					"name" : "out_Reg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[5]",
+					"name" : "out_Reg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[6]",
+					"name" : "out_Reg1[7]",
 					"strict" : false
 				},
 				{
-					"name" : "outULA[7]",
+					"name" : "out_Reg2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "overflow",
+					"name" : "out_Reg2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "AluOp[2]",
+					"name" : "out_Reg2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[0]",
+					"name" : "out_Reg2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "AluOp[0]",
+					"name" : "out_Reg2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[0]",
+					"name" : "out_Reg2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "AluOp[1]",
+					"name" : "out_Reg2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "AluOp[3]",
+					"name" : "out_Reg2[7]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[1]",
+					"name" : "addressReg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[1]",
+					"name" : "addressReg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[2]",
+					"name" : "addressReg2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[2]",
+					"name" : "addressReg2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[3]",
+					"name" : "escreveDado[0]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[3]",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[4]",
+					"name" : "escreveReg",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[4]",
+					"name" : "escreveDado[1]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[5]",
+					"name" : "escreveDado[2]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[5]",
+					"name" : "escreveDado[3]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[6]",
+					"name" : "escreveDado[4]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[6]",
+					"name" : "escreveDado[5]",
 					"strict" : false
 				},
 				{
-					"name" : "in_B[7]",
+					"name" : "escreveDado[6]",
 					"strict" : false
 				},
 				{
-					"name" : "in_A[7]",
+					"name" : "escreveDado[7]",
 					"strict" : false
 				}
 			]
