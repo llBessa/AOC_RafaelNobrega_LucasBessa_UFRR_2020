@@ -4,179 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "outPC[0]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[6]",
-					"strict" : false
-				},
-				{
-					"name" : "outPC[7]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[0]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[1]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[2]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[6]",
-					"strict" : false
-				},
-				{
-					"name" : "outROM[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Opcode[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Opcode[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Opcode[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Opcode[3]",
-					"strict" : false
-				},
-				{
-					"name" : "JumpAddress[0]",
-					"strict" : false
-				},
-				{
-					"name" : "JumpAddress[1]",
-					"strict" : false
-				},
-				{
-					"name" : "JumpAddress[2]",
-					"strict" : false
-				},
-				{
-					"name" : "JumpAddress[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1Address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1Address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2Address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2Address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg1[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg2[7]",
+					"name" : "zero",
 					"strict" : false
 				},
 				{
@@ -216,47 +44,83 @@
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[0]",
+					"name" : "AluOp[2]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[1]",
+					"name" : "in_A[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[2]",
+					"name" : "AluOp[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[3]",
+					"name" : "in_B[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[4]",
+					"name" : "AluOp[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[5]",
+					"name" : "AluOp[3]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[6]",
+					"name" : "in_A[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outSomaPC[7]",
+					"name" : "in_B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outAndPort",
+					"name" : "in_A[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Zero",
+					"name" : "in_B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "in_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "in_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "in_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "in_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "in_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "in_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "in_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "in_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "in_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "in_A[7]",
 					"strict" : false
 				}
 			]

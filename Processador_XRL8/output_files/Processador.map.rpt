@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Wed May 12 18:07:27 2021
+Thu May 13 22:46:34 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,15 +15,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "ULA:ALU|Subtrator_8b:sub"
- 15. Port Connectivity Checks: "ULA:ALU|somador8bits:soma|somador:sum0"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "Subtrator_8b:sub"
+ 12. Port Connectivity Checks: "somador8bits:soma|somador:sum0"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -50,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 12 18:07:27 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 13 22:46:34 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Processador                                 ;
-; Top-level Entity Name           ; processador                                 ;
+; Top-level Entity Name           ; ULA                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 40                                          ;
-; Total pins                      ; 72                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 30                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -76,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; processador        ; Processador        ;
+; Top-level entity name                                                           ; ULA                ; Processador        ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -162,133 +159,122 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
-+---------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                        ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                    ; Library ;
-+---------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Componentes/AuxiliarDeJumpC/AuxJumpC.vhd                ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd                ;         ;
-; Componentes/BancodeRegistradores/BancoRegistradores.vhd ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd ;         ;
-; Componentes/Controle/UnidadeDeControle.vhd              ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd              ;         ;
-; Componentes/Divisaobits/Divisaobits.vhd                 ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Divisaobits/Divisaobits.vhd                 ;         ;
-; Componentes/Extensores/Extensor_4_8.vhd                 ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_4_8.vhd                 ;         ;
-; Componentes/Extensores/Extensor_2_8.vhd                 ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_2_8.vhd                 ;         ;
-; Componentes/memorias/memoriaROM.vhd                     ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd                     ;         ;
-; Componentes/memorias/memoriaRAM.vhd                     ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd                     ;         ;
-; Componentes/Multiplexador/mult2x1.vhd                   ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplexador/mult2x1.vhd                   ;         ;
-; Componentes/Multiplicador/Multiplicador.vhd             ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd             ;         ;
-; Componentes/PCeSomadorPC/Somador_pc.vhd                 ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd                 ;         ;
-; Componentes/PCeSomadorPC/Pc.vhd                         ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd                         ;         ;
-; Componentes/PortasLogicas/p_xor.vhd                     ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd                     ;         ;
-; Componentes/PortasLogicas/p_or.vhd                      ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd                      ;         ;
-; Componentes/PortasLogicas/p_not.vhd                     ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd                     ;         ;
-; Componentes/PortasLogicas/p_and.vhd                     ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd                     ;         ;
-; Componentes/Somador/somador8bits.vhd                    ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd                    ;         ;
-; Componentes/Somador/somador.vhd                         ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd                         ;         ;
-; Componentes/Subtrator/Subtrator_8b.vhd                  ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd                  ;         ;
-; Componentes/ULA/ULA.vhd                                 ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd                                 ;         ;
-; processador.vhd                                         ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd                                         ;         ;
-+---------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                  ;
++---------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path            ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                ; Library ;
++---------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Componentes/AuxiliarDeJumpC/AuxJumpC.vhd    ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd    ;         ;
+; Componentes/Multiplicador/Multiplicador.vhd ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd ;         ;
+; Componentes/PortasLogicas/p_xor.vhd         ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd         ;         ;
+; Componentes/PortasLogicas/p_or.vhd          ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd          ;         ;
+; Componentes/PortasLogicas/p_not.vhd         ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd         ;         ;
+; Componentes/PortasLogicas/p_and.vhd         ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd         ;         ;
+; Componentes/Somador/somador8bits.vhd        ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd        ;         ;
+; Componentes/Somador/somador.vhd             ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd             ;         ;
+; Componentes/Subtrator/Subtrator_8b.vhd      ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd      ;         ;
+; Componentes/ULA/ULA.vhd                     ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd                     ;         ;
++---------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 105         ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 157         ;
-;     -- 7 input functions                    ; 5           ;
-;     -- 6 input functions                    ; 45          ;
-;     -- 5 input functions                    ; 14          ;
-;     -- 4 input functions                    ; 32          ;
-;     -- <=3 input functions                  ; 61          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 40          ;
-;                                             ;             ;
-; I/O pins                                    ; 72          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 1           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 40          ;
-; Total fan-out                               ; 928         ;
-; Average fan-out                             ; 2.71        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 48             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 67             ;
+;     -- 7 input functions                    ; 18             ;
+;     -- 6 input functions                    ; 11             ;
+;     -- 5 input functions                    ; 9              ;
+;     -- 4 input functions                    ; 10             ;
+;     -- <=3 input functions                  ; 19             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 30             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; AluOp[0]~input ;
+; Maximum fan-out                             ; 29             ;
+; Total fan-out                               ; 369            ;
+; Average fan-out                             ; 2.88           ;
++---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name        ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
-; |processador                          ; 157 (1)             ; 40 (0)                    ; 0                 ; 1          ; 72   ; 0            ; |processador                                                                               ; processador        ; work         ;
-;    |BancoRegistradores:Registradores| ; 20 (20)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|BancoRegistradores:Registradores                                              ; BancoRegistradores ; work         ;
-;    |Pc:ProgramCounter|                ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|Pc:ProgramCounter                                                             ; Pc                 ; work         ;
-;    |Somador_pc:SomaPC|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|Somador_pc:SomaPC                                                             ; Somador_pc         ; work         ;
-;    |ULA:ALU|                          ; 83 (57)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |processador|ULA:ALU                                                                       ; ULA                ; work         ;
-;       |Subtrator_8b:sub|              ; 16 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub                                                      ; Subtrator_8b       ; work         ;
-;          |somador8bits:saia|          ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia                                    ; somador8bits       ; work         ;
-;             |somador:sum1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum1                       ; somador            ; work         ;
-;                |p_or:saida|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum1|p_or:saida            ; p_or               ; work         ;
-;             |somador:sum2|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum2                       ; somador            ; work         ;
-;                |p_or:saida|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum2|p_or:saida            ; p_or               ; work         ;
-;             |somador:sum3|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum3                       ; somador            ; work         ;
-;                |p_or:saida|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum3|p_or:saida            ; p_or               ; work         ;
-;             |somador:sum5|            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5                       ; somador            ; work         ;
-;                |p_and:carryout|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_and:carryout        ; p_and              ; work         ;
-;                |p_or:saida|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_or:saida            ; p_or               ; work         ;
-;                |p_xor:sum1|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum1            ; p_xor              ; work         ;
-;                   |p_and:p_an|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum1|p_and:p_an ; p_and              ; work         ;
-;                |p_xor:sum|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum             ; p_xor              ; work         ;
-;                   |p_or:p_o|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum|p_or:p_o    ; p_or               ; work         ;
-;             |somador:sum6|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum6                       ; somador            ; work         ;
-;                |p_xor:sum|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum6|p_xor:sum             ; p_xor              ; work         ;
-;                   |p_or:p_o|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|Subtrator_8b:sub|somador8bits:saia|somador:sum6|p_xor:sum|p_or:p_o    ; p_or               ; work         ;
-;       |multiplicador:multi|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |processador|ULA:ALU|multiplicador:multi                                                   ; multiplicador      ; work         ;
-;       |somador8bits:soma|             ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma                                                     ; somador8bits       ; work         ;
-;          |somador:sum1|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum1                                        ; somador            ; work         ;
-;             |p_xor:sum1|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum1|p_xor:sum1                             ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum1|p_xor:sum1|p_or:p_o                    ; p_or               ; work         ;
-;          |somador:sum2|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum2                                        ; somador            ; work         ;
-;             |p_or:saida|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum2|p_or:saida                             ; p_or               ; work         ;
-;             |p_xor:sum1|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum2|p_xor:sum1                             ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum2|p_xor:sum1|p_or:p_o                    ; p_or               ; work         ;
-;          |somador:sum3|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum3                                        ; somador            ; work         ;
-;             |p_xor:sum1|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum3|p_xor:sum1                             ; p_xor              ; work         ;
-;                |p_and:p_an|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum3|p_xor:sum1|p_and:p_an                  ; p_and              ; work         ;
-;             |p_xor:sum|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum3|p_xor:sum                              ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum3|p_xor:sum|p_or:p_o                     ; p_or               ; work         ;
-;          |somador:sum5|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum5                                        ; somador            ; work         ;
-;             |p_or:saida|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum5|p_or:saida                             ; p_or               ; work         ;
-;             |p_xor:sum1|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum5|p_xor:sum1                             ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum5|p_xor:sum1|p_or:p_o                    ; p_or               ; work         ;
-;          |somador:sum6|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum6                                        ; somador            ; work         ;
-;             |p_xor:sum|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum6|p_xor:sum                              ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum6|p_xor:sum|p_or:p_o                     ; p_or               ; work         ;
-;          |somador:sum7|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum7                                        ; somador            ; work         ;
-;             |p_xor:sum|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum7|p_xor:sum                              ; p_xor              ; work         ;
-;                |p_or:p_o|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:ALU|somador8bits:soma|somador:sum7|p_xor:sum|p_or:p_o                     ; p_or               ; work         ;
-;    |UnidadeDeControle:Controle|       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|UnidadeDeControle:Controle                                                    ; UnidadeDeControle  ; work         ;
-;    |memoriaROM:ROM|                   ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|memoriaROM:ROM                                                                ; memoriaROM         ; work         ;
-;    |mult2x1:Mult1|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mult2x1:Mult1                                                                 ; mult2x1            ; work         ;
-;    |mult2x1:Mult3|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mult2x1:Mult3                                                                 ; mult2x1            ; work         ;
-;    |mult2x1:Mult4|                    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mult2x1:Mult4                                                                 ; mult2x1            ; work         ;
-;    |p_and:AndPorta|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|p_and:AndPorta                                                                ; p_and              ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------+--------------+
+; |ULA                       ; 67 (35)             ; 0 (0)                     ; 0                 ; 1          ; 30   ; 0            ; |ULA                                                                    ; ULA           ; work         ;
+;    |Subtrator_8b:sub|      ; 14 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub                                                   ; Subtrator_8b  ; work         ;
+;       |somador8bits:saia|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia                                 ; somador8bits  ; work         ;
+;          |somador:sum1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum1                    ; somador       ; work         ;
+;             |p_or:saida|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum1|p_or:saida         ; p_or          ; work         ;
+;          |somador:sum2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum2                    ; somador       ; work         ;
+;             |p_or:saida|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum2|p_or:saida         ; p_or          ; work         ;
+;          |somador:sum3|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum3                    ; somador       ; work         ;
+;             |p_or:saida|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum3|p_or:saida         ; p_or          ; work         ;
+;          |somador:sum4|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum4                    ; somador       ; work         ;
+;             |p_or:saida|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum4|p_or:saida         ; p_or          ; work         ;
+;          |somador:sum5|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum5                    ; somador       ; work         ;
+;             |p_or:saida|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_or:saida         ; p_or          ; work         ;
+;             |p_xor:sum|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum          ; p_xor         ; work         ;
+;                |p_or:p_o|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|Subtrator_8b:sub|somador8bits:saia|somador:sum5|p_xor:sum|p_or:p_o ; p_or          ; work         ;
+;    |multiplicador:multi|   ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |ULA|multiplicador:multi                                                ; multiplicador ; work         ;
+;    |somador8bits:soma|     ; 18 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma                                                  ; somador8bits  ; work         ;
+;       |somador:sum1|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum1                                     ; somador       ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum1|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum1|p_xor:sum1|p_or:p_o                 ; p_or          ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum1|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum1|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum2|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2                                     ; somador       ; work         ;
+;          |p_or:saida|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2|p_or:saida                          ; p_or          ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2|p_xor:sum1|p_or:p_o                 ; p_or          ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum2|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum3|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum3                                     ; somador       ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum3|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum3|p_xor:sum1|p_or:p_o                 ; p_or          ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum3|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum3|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum4|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4                                     ; somador       ; work         ;
+;          |p_or:saida|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4|p_or:saida                          ; p_or          ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4|p_xor:sum1|p_or:p_o                 ; p_or          ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum4|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum5|       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum5                                     ; somador       ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum5|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_and:p_an|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum5|p_xor:sum1|p_and:p_an               ; p_and         ; work         ;
+;          |p_xor:sum|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum5|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum5|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum6|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6                                     ; somador       ; work         ;
+;          |p_or:saida|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6|p_or:saida                          ; p_or          ; work         ;
+;          |p_xor:sum1|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6|p_xor:sum1                          ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6|p_xor:sum1|p_or:p_o                 ; p_or          ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum6|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
+;       |somador:sum7|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum7                                     ; somador       ; work         ;
+;          |p_xor:sum|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum7|p_xor:sum                           ; p_xor         ; work         ;
+;             |p_or:p_o|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ULA|somador8bits:soma|somador:sum7|p_xor:sum|p_or:p_o                  ; p_or          ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -304,90 +290,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; ULA:ALU|overflow                                   ; ULA:ALU|Mux13                   ; yes                    ;
-; ULA:ALU|zero                                       ; UnidadeDeControle:Controle|Mux5 ; yes                    ;
-; ULA:ALU|condition                                  ; ULA:ALU|Mux1                    ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                                 ;                        ;
-+----------------------------------------------------+---------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; zero$latch                                         ; Mux11               ; yes                    ;
+; overflow$latch                                     ; Mux13               ; yes                    ;
+; condition                                          ; Mux1                ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; memoriaRAM:RAM|out_data[0]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~41           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~33           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~25           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~17           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[1]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~42           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~34           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~26           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~18           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[2]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~43           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~35           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~27           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~19           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[3]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~44           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~36           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~28           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~20           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[4]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~45           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~37           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~29           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~21           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[5]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~46           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~38           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~30           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~22           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[6]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~47           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~39           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~31           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~23           ; Lost fanout                                 ;
-; memoriaRAM:RAM|out_data[7]             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM|memoriaRAM~48           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~40           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~32           ; Lost fanout                                 ;
-; memoriaRAM:RAM|memoriaRAM~24           ; Lost fanout                                 ;
-; Total Number of Removed Registers = 40 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                               ;
-+----------------------------+--------------------------------+-------------------------------------------------------------+
-; Register name              ; Reason for Removal             ; Registers Removed due to This Register                      ;
-+----------------------------+--------------------------------+-------------------------------------------------------------+
-; memoriaRAM:RAM|out_data[0] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~41, memoriaRAM:RAM|memoriaRAM~33, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~25, memoriaRAM:RAM|memoriaRAM~17  ;
-; memoriaRAM:RAM|out_data[1] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~42, memoriaRAM:RAM|memoriaRAM~34, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~26, memoriaRAM:RAM|memoriaRAM~18  ;
-; memoriaRAM:RAM|out_data[2] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~43, memoriaRAM:RAM|memoriaRAM~35, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~27, memoriaRAM:RAM|memoriaRAM~19  ;
-; memoriaRAM:RAM|out_data[3] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~44, memoriaRAM:RAM|memoriaRAM~36, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~28, memoriaRAM:RAM|memoriaRAM~20  ;
-; memoriaRAM:RAM|out_data[4] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~45, memoriaRAM:RAM|memoriaRAM~37, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~29, memoriaRAM:RAM|memoriaRAM~21  ;
-; memoriaRAM:RAM|out_data[5] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~46, memoriaRAM:RAM|memoriaRAM~38, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~30, memoriaRAM:RAM|memoriaRAM~22  ;
-; memoriaRAM:RAM|out_data[6] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~47, memoriaRAM:RAM|memoriaRAM~39, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~31, memoriaRAM:RAM|memoriaRAM~23  ;
-; memoriaRAM:RAM|out_data[7] ; Stuck at GND                   ; memoriaRAM:RAM|memoriaRAM~48, memoriaRAM:RAM|memoriaRAM~40, ;
-;                            ; due to stuck port clock_enable ; memoriaRAM:RAM|memoriaRAM~32, memoriaRAM:RAM|memoriaRAM~24  ;
-+----------------------------+--------------------------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -395,27 +308,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 40    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |processador|Pc:ProgramCounter|out_port[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ULA:ALU|Subtrator_8b:sub"                                                           ;
+; Port Connectivity Checks: "Subtrator_8b:sub"                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -423,13 +327,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "ULA:ALU|somador8bits:soma|somador:sum0" ;
-+------+-------+----------+------------------------------------------+
-; Port ; Type  ; Severity ; Details                                  ;
-+------+-------+----------+------------------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                             ;
-+------+-------+----------+------------------------------------------+
++------------------------------------------------------------+
+; Port Connectivity Checks: "somador8bits:soma|somador:sum0" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -437,29 +341,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 40                          ;
-;     ENA               ; 32                          ;
-;     SLD               ; 8                           ;
-; arriav_lcell_comb     ; 159                         ;
-;     arith             ; 16                          ;
+; arriav_lcell_comb     ; 67                          ;
+;     arith             ; 8                           ;
 ;         1 data inputs ; 8                           ;
+;     extend            ; 18                          ;
+;         7 data inputs ; 18                          ;
+;     normal            ; 41                          ;
 ;         2 data inputs ; 6                           ;
-;         4 data inputs ; 2                           ;
-;     extend            ; 5                           ;
-;         7 data inputs ; 5                           ;
-;     normal            ; 138                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 26                          ;
-;         4 data inputs ; 30                          ;
-;         5 data inputs ; 14                          ;
-;         6 data inputs ; 45                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 11                          ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 72                          ;
+; boundary_port         ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.50                        ;
-; Average LUT depth     ; 6.87                        ;
+; Max LUT depth         ; 6.20                        ;
+; Average LUT depth     ; 4.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -468,7 +365,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -478,147 +375,126 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 12 18:07:10 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
+    Info: Processing started: Thu May 13 22:46:20 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/auxiliardejumpc/auxjumpc.vhd
-    Info (12022): Found design unit 1: AuxJumpC-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd Line: 13
-    Info (12023): Found entity 1: AuxJumpC File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd Line: 6
+    Info (12022): Found design unit 1: AuxJumpC-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd Line: 13
+    Info (12023): Found entity 1: AuxJumpC File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/AuxiliarDeJumpC/AuxJumpC.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/bancoderegistradores/bancoregistradores.vhd
-    Info (12022): Found design unit 1: BancoRegistradores-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd Line: 16
-    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd Line: 5
+    Info (12022): Found design unit 1: BancoRegistradores-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd Line: 16
+    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/controle/unidadedecontrole.vhd
-    Info (12022): Found design unit 1: UnidadeDeControle-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd Line: 21
-    Info (12023): Found entity 1: UnidadeDeControle File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd Line: 4
+    Info (12022): Found design unit 1: UnidadeDeControle-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd Line: 21
+    Info (12023): Found entity 1: UnidadeDeControle File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/divisaobits/divisaobits.vhd
-    Info (12022): Found design unit 1: Divisaobits-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Divisaobits/Divisaobits.vhd Line: 16
-    Info (12023): Found entity 1: Divisaobits File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Divisaobits/Divisaobits.vhd Line: 6
+    Info (12022): Found design unit 1: Divisaobits-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Divisaobits/Divisaobits.vhd Line: 16
+    Info (12023): Found entity 1: Divisaobits File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Divisaobits/Divisaobits.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensores/extensor_4_8.vhd
-    Info (12022): Found design unit 1: Extensor_4_8-Behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_4_8.vhd Line: 12
-    Info (12023): Found entity 1: Extensor_4_8 File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_4_8.vhd Line: 4
+    Info (12022): Found design unit 1: Extensor_4_8-Behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_4_8.vhd Line: 12
+    Info (12023): Found entity 1: Extensor_4_8 File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_4_8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensores/extensor_2_8.vhd
-    Info (12022): Found design unit 1: Extensor_2_8-Behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_2_8.vhd Line: 12
-    Info (12023): Found entity 1: Extensor_2_8 File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_2_8.vhd Line: 4
+    Info (12022): Found design unit 1: Extensor_2_8-Behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_2_8.vhd Line: 12
+    Info (12023): Found entity 1: Extensor_2_8 File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Extensores/Extensor_2_8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/memorias/memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 13
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 13
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/memorias/memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd Line: 17
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd Line: 6
+    Info (12022): Found design unit 1: memoriaRAM-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd Line: 17
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/multiplexador/mult2x1.vhd
-    Info (12022): Found design unit 1: mult2x1-logic File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplexador/mult2x1.vhd Line: 14
-    Info (12023): Found entity 1: mult2x1 File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplexador/mult2x1.vhd Line: 5
+    Info (12022): Found design unit 1: mult2x1-logic File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplexador/mult2x1.vhd Line: 14
+    Info (12023): Found entity 1: mult2x1 File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplexador/mult2x1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/multiplicador/multiplicador.vhd
-    Info (12022): Found design unit 1: multiplicador-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd Line: 14
-    Info (12023): Found entity 1: multiplicador File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd Line: 6
+    Info (12022): Found design unit 1: multiplicador-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd Line: 14
+    Info (12023): Found entity 1: multiplicador File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Multiplicador/Multiplicador.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/pcesomadorpc/somador_pc.vhd
-    Info (12022): Found design unit 1: Somador_pc-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd Line: 13
-    Info (12023): Found entity 1: Somador_pc File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd Line: 5
+    Info (12022): Found design unit 1: Somador_pc-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd Line: 13
+    Info (12023): Found entity 1: Somador_pc File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/pcesomadorpc/pc.vhd
-    Info (12022): Found design unit 1: Pc-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 12
-    Info (12023): Found entity 1: Pc File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 4
+    Info (12022): Found design unit 1: Pc-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 12
+    Info (12023): Found entity 1: Pc File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/portaslogicas/p_xor.vhd
-    Info (12022): Found design unit 1: p_xor-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 12
-    Info (12023): Found entity 1: p_xor File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 4
+    Info (12022): Found design unit 1: p_xor-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 12
+    Info (12023): Found entity 1: p_xor File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/portaslogicas/p_or.vhd
-    Info (12022): Found design unit 1: p_or-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd Line: 12
-    Info (12023): Found entity 1: p_or File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd Line: 4
+    Info (12022): Found design unit 1: p_or-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd Line: 12
+    Info (12023): Found entity 1: p_or File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_or.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/portaslogicas/p_not.vhd
-    Info (12022): Found design unit 1: p_not-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd Line: 11
-    Info (12023): Found entity 1: p_not File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd Line: 4
+    Info (12022): Found design unit 1: p_not-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd Line: 11
+    Info (12023): Found entity 1: p_not File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_not.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/portaslogicas/p_and.vhd
-    Info (12022): Found design unit 1: p_and-behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd Line: 12
-    Info (12023): Found entity 1: p_and File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd Line: 4
+    Info (12022): Found design unit 1: p_and-behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd Line: 12
+    Info (12023): Found entity 1: p_and File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_and.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/somador/somador8bits.vhd
-    Info (12022): Found design unit 1: somador8bits-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 14
-    Info (12023): Found entity 1: somador8bits File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 5
+    Info (12022): Found design unit 1: somador8bits-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 14
+    Info (12023): Found entity 1: somador8bits File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/somador/somador.vhd
-    Info (12022): Found design unit 1: somador-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 17
-    Info (12023): Found entity 1: somador File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 7
+    Info (12022): Found design unit 1: somador-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 17
+    Info (12023): Found entity 1: somador File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/subtrator/subtrator_8b.vhd
-    Info (12022): Found design unit 1: Subtrator_8b-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd Line: 16
-    Info (12023): Found entity 1: Subtrator_8b File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd Line: 6
+    Info (12022): Found design unit 1: Subtrator_8b-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd Line: 16
+    Info (12023): Found entity 1: Subtrator_8b File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Subtrator/Subtrator_8b.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/ula.vhd
-    Info (12022): Found design unit 1: ULA-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 17
-    Info (12023): Found entity 1: ULA File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 6
+    Info (12022): Found design unit 1: ULA-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 17
+    Info (12023): Found entity 1: ULA File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-main File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 26
-    Info (12023): Found entity 1: processador File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 6
-Info (12127): Elaborating entity "processador" for the top level hierarchy
-Info (12128): Elaborating entity "Pc" for hierarchy "Pc:ProgramCounter" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 198
-Info (12128): Elaborating entity "Somador_pc" for hierarchy "Somador_pc:SomaPC" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 201
-Warning (10492): VHDL Process Statement warning at Somador_pc.vhd(17): signal "in_port" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Somador_pc.vhd Line: 17
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 204
-Warning (10492): VHDL Process Statement warning at memoriaROM.vhd(45): signal "memoriaROM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 45
-Warning (10492): VHDL Process Statement warning at memoriaROM.vhd(45): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaROM.vhd Line: 45
-Info (12128): Elaborating entity "Divisaobits" for hierarchy "Divisaobits:Divisao" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 207
-Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:Registradores" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 210
-Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:Controle" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 213
-Warning (10492): VHDL Process Statement warning at UnidadeDeControle.vhd(25): signal "Op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Controle/UnidadeDeControle.vhd Line: 25
-Info (12128): Elaborating entity "Extensor_4_8" for hierarchy "Extensor_4_8:Extensor4p8" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 216
-Info (12128): Elaborating entity "Extensor_2_8" for hierarchy "Extensor_2_8:Extensor2p8" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 217
-Info (12128): Elaborating entity "mult2x1" for hierarchy "mult2x1:Mult2" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 220
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 227
-Warning (10036): Verilog HDL or VHDL warning at ULA.vhd(52): object "overflowSub" assigned a value but never read File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 52
-Warning (10492): VHDL Process Statement warning at ULA.vhd(69): signal "somadorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at ULA.vhd(70): signal "overflowSoma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 70
-Warning (10492): VHDL Process Statement warning at ULA.vhd(72): signal "subtratorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 72
-Warning (10492): VHDL Process Statement warning at ULA.vhd(74): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at ULA.vhd(76): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at ULA.vhd(78): signal "resultcondition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at ULA.vhd(85): signal "resultcondition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 85
-Warning (10492): VHDL Process Statement warning at ULA.vhd(92): signal "somadorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at ULA.vhd(93): signal "overflowSoma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at ULA.vhd(95): signal "multiOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 95
-Warning (10492): VHDL Process Statement warning at ULA.vhd(96): signal "multiOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at ULA.vhd(102): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at ULA.vhd(102): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at ULA.vhd(104): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at ULA.vhd(104): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at ULA.vhd(106): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at ULA.vhd(108): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at ULA.vhd(110): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at ULA.vhd(112): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at ULA.vhd(112): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 112
-Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "condition", which holds its previous value in one or more paths through the process File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Info (10041): Inferred latch for "condition" at ULA.vhd(64) File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Info (10041): Inferred latch for "zero" at ULA.vhd(64) File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Info (10041): Inferred latch for "overflow" at ULA.vhd(64) File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
-Info (12128): Elaborating entity "AuxJumpC" for hierarchy "ULA:ALU|AuxJumpC:aux" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 59
-Info (12128): Elaborating entity "somador8bits" for hierarchy "ULA:ALU|somador8bits:soma" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 60
-Info (12128): Elaborating entity "somador" for hierarchy "ULA:ALU|somador8bits:soma|somador:sum0" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 28
-Info (12128): Elaborating entity "p_xor" for hierarchy "ULA:ALU|somador8bits:soma|somador:sum0|p_xor:sum" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 46
-Info (12128): Elaborating entity "p_not" for hierarchy "ULA:ALU|somador8bits:soma|somador:sum0|p_xor:sum|p_not:n_A" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 44
-Info (12128): Elaborating entity "p_and" for hierarchy "ULA:ALU|somador8bits:soma|somador:sum0|p_xor:sum|p_and:p_an" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 47
-Info (12128): Elaborating entity "p_or" for hierarchy "ULA:ALU|somador8bits:soma|somador:sum0|p_xor:sum|p_or:p_o" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 50
-Info (12128): Elaborating entity "Subtrator_8b" for hierarchy "ULA:ALU|Subtrator_8b:sub" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 61
-Info (12128): Elaborating entity "multiplicador" for hierarchy "ULA:ALU|multiplicador:multi" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 62
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 233
-Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "memoriaRAM:RAM|memoriaRAM" is uninferred due to inappropriate RAM size File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/memorias/memoriaRAM.vhd Line: 19
-    Info (276004): RAM logic "BancoRegistradores:Registradores|registradores" is uninferred due to inappropriate RAM size File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/BancodeRegistradores/BancoRegistradores.vhd Line: 19
-Warning (13012): Latch ULA:ALU|overflow has unsafe behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 13
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pc:ProgramCounter|out_port[4] File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 16
-Warning (13012): Latch ULA:ALU|zero has unsafe behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pc:ProgramCounter|out_port[7] File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 16
-Warning (13012): Latch ULA:ALU|condition has unsafe behavior File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pc:ProgramCounter|out_port[7] File: C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PCeSomadorPC/Pc.vhd Line: 16
+    Info (12022): Found design unit 1: processador-main File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 26
+    Info (12023): Found entity 1: processador File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/processador.vhd Line: 6
+Info (12127): Elaborating entity "ULA" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ULA.vhd(52): object "overflowSub" assigned a value but never read File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at ULA.vhd(69): signal "somadorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at ULA.vhd(70): signal "overflowSoma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at ULA.vhd(72): signal "subtratorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at ULA.vhd(74): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at ULA.vhd(76): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at ULA.vhd(78): signal "resultcondition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at ULA.vhd(85): signal "resultcondition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at ULA.vhd(92): signal "somadorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at ULA.vhd(93): signal "overflowSoma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at ULA.vhd(95): signal "multiOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at ULA.vhd(96): signal "multiOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at ULA.vhd(102): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at ULA.vhd(102): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at ULA.vhd(104): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at ULA.vhd(104): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at ULA.vhd(106): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at ULA.vhd(108): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at ULA.vhd(110): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at ULA.vhd(112): signal "in_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at ULA.vhd(112): signal "in_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 112
+Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Warning (10631): VHDL Process Statement warning at ULA.vhd(64): inferring latch(es) for signal or variable "condition", which holds its previous value in one or more paths through the process File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Info (10041): Inferred latch for "condition" at ULA.vhd(64) File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Info (10041): Inferred latch for "zero" at ULA.vhd(64) File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Info (10041): Inferred latch for "overflow" at ULA.vhd(64) File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+Info (12128): Elaborating entity "AuxJumpC" for hierarchy "AuxJumpC:aux" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 59
+Info (12128): Elaborating entity "somador8bits" for hierarchy "somador8bits:soma" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 60
+Info (12128): Elaborating entity "somador" for hierarchy "somador8bits:soma|somador:sum0" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador8bits.vhd Line: 28
+Info (12128): Elaborating entity "p_xor" for hierarchy "somador8bits:soma|somador:sum0|p_xor:sum" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/Somador/somador.vhd Line: 46
+Info (12128): Elaborating entity "p_not" for hierarchy "somador8bits:soma|somador:sum0|p_xor:sum|p_not:n_A" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 44
+Info (12128): Elaborating entity "p_and" for hierarchy "somador8bits:soma|somador:sum0|p_xor:sum|p_and:p_an" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 47
+Info (12128): Elaborating entity "p_or" for hierarchy "somador8bits:soma|somador:sum0|p_xor:sum|p_or:p_o" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/PortasLogicas/p_xor.vhd Line: 50
+Info (12128): Elaborating entity "Subtrator_8b" for hierarchy "Subtrator_8b:sub" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 61
+Info (12128): Elaborating entity "multiplicador" for hierarchy "multiplicador:multi" File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 62
+Warning (13012): Latch zero$latch has unsafe behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AluOp[0] File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 10
+Warning (13012): Latch overflow$latch has unsafe behavior File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AluOp[3] File: C:/Users/Administrator/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Componentes/ULA/ULA.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 270 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 197 logic cells
+Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 67 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Wed May 12 18:07:27 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Thu May 13 22:46:34 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
 
 
