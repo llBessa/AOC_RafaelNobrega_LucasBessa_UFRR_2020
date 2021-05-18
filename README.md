@@ -5,7 +5,7 @@
 </p>
 
 
-## Autores do Projeto 🤝
+## Autores do Projeto
 
 * [**Rafael Nóbrega de Lima**](https://https://github.com/KylixXD)
 * [**Lucas Bessa Façanha Pereira**](https://github.com/llBessa) 
