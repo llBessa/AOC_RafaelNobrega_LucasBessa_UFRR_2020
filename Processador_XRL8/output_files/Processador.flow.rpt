@@ -1,5 +1,5 @@
 Flow report for Processador
-Wed May 12 18:07:47 2021
+Thu May 13 22:46:34 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 12 18:07:47 2021       ;
+; Flow Status                     ; Successful - Thu May 13 22:46:34 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Processador                                 ;
-; Top-level Entity Name           ; processador                                 ;
+; Top-level Entity Name           ; ULA                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 40                                          ;
-; Total pins                      ; 72                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 30                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2021 18:07:11 ;
+; Start date & time ; 05/13/2021 22:46:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processador         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 79965022021377.162085723011456         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 963357055072.162096038108640           ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -89,12 +89,13 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; processador ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; processador ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; processador ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ULA         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ULA         ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ULA         ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; ULA                                    ; Processador   ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -103,10 +104,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4844 MB             ; 00:00:32                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4722 MB             ; 00:00:01                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4860 MB             ; 00:00:27                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,18 +114,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Bessa-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Bessa-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Bessa-PC         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; WIN-8R0A1PJK4D6  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Processador -c Processador --vector_source=C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/Waveform.vwf --testbench_file=C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/lucas/Documents/GitHub/AOC_RafaelNobrega_LucasBessa_UFRR_2020/Processador_XRL8/simulation/qsim/ Processador -c Processador
+quartus_map --read_settings_files=on --write_settings_files=off processador -c Processador
 
 
 
