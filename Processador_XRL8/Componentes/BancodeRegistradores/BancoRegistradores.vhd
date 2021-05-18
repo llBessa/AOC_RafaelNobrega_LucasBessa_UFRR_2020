@@ -19,7 +19,7 @@ Architecture main of BancoRegistradores is
 	Signal registradores : BancoRegistradores;
 
 Begin
-		Process (clock, addressReg1, addressReg2, registradores)
+		Process (clock)
 		Begin
 				if rising_edge(clock) then
 					if (escreveReg = '1') then

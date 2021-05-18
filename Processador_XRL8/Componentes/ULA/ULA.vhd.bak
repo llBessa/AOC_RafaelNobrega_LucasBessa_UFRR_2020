@@ -10,8 +10,7 @@ entity ULA is
     AluOp   : in std_logic_vector(3 downto 0); 
     zero    : out std_logic;
     outULA  : out std_logic_vector(7 downto 0);
-    overflow: out std_logic;
-	clock 	: in std_logic	
+    overflow: out std_logic
     );
 end entity;
 

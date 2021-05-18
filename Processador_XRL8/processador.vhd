@@ -118,7 +118,8 @@ architecture main of processador is
     AluOp   : in std_logic_vector(3 downto 0); 
     zero    : out std_logic;
     outULA  : out std_logic_vector(7 downto 0);
-    overflow: out std_logic
+    overflow: out std_logic;
+    clock   : in std_logic
     );
   end component;
 
@@ -224,7 +225,7 @@ architecture main of processador is
     Mult1 : mult2x1 port map(outDado2, outExt2p8, OrigALUFlag, outMultplex1);
 
     -- ligação mult/BR e ULA
-    ALU : ULA port map(outDado1, outMultplex1, ALUOpFlag, ULAZero, saidaULA, estouroMEM);
+    ALU : ULA port map(outDado1, outMultplex1, ALUOpFlag, ULAZero, saidaULA, estouroMEM, clock);
 
     -- ligação Zero/Branch e porta and
     AndPorta : p_and port map(BranchFlag, ULAZero, outAnd);
