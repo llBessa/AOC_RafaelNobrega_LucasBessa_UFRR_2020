@@ -3,7 +3,7 @@ use Ieee.std_logic_1164.all;
 
 Entity UnidadeDeControle is
 	Port(
-		  clock : IN std_logic;
+		clock : IN std_logic;
         Op_code : IN std_logic_vector (3 DOWNTO 0);
         OrigAlu : OUT std_logic;
         EscreveReg : OUT std_logic;
@@ -178,7 +178,7 @@ Begin
                 EscreveReg <= '0';
                 EscreveMem <= '0';
                 AluOp <= "1111";
-                MemToReg <= '0';
+                MemToReg <= '1';
                 LerMem <= '0';
                 Branch <= '0';
                 Jump <= '0';

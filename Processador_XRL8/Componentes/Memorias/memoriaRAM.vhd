@@ -16,7 +16,7 @@ end entity;
 
 architecture main of memoriaRAM is
     type RAM is array(0 to 255) of std_logic_vector(7 downto 0);
-    signal memoriaRAM : RAM;
+    signal memoriaRAM : RAM := (OTHERS => "00000000");
     begin
         process(clock)
         begin
@@ -24,10 +24,9 @@ architecture main of memoriaRAM is
                 if (escreveMem = '1') then
                     memoriaRAM(to_integer(unsigned(endereco))) <= in_data;
                 end if;
-
+            end if;    
                 if (lerMem = '1') then
                     out_data <= memoriaRAM(to_integer(unsigned(endereco)));
-                end if;
-            end if;
+                    end if;
         end process;
 end main;
